@@ -1,0 +1,116 @@
+```python
+"""
+Good Parents Justice - Flask Application for Google Cloud App Engine
+Comprehensive family law assistance platform for Ontario parents
+"""
+
+import os
+import logging
+from flask import Flask, jsonify, request, render_template
+from google.cloud import logging as cloud_logging
+from datetime import datetime
+import traceback
+
+# Initialize Flask application
+app = Flask(__name__)
+
+# Configure logging for Google Cloud
+if os.getenv('GAE_ENV', '').startswith('standard'):
+    # Production environment - use Google Cloud Logging
+    cloud_logging_client = cloud_logging.Client()
+    cloud_logging_client.setup_logging()
+else:
+    # Local development - use standard logging
+    logging.basicConfig(level=logging.INFO)
+
+logger = logging.getLogger(__name__)
+
+@app.route('/')
+def home():
+    """Home page - Good Parents Justice landing page"""
+    try:
+        return render_template('index.html')
+    except Exception as e:
+        logger.error(f"Error in home route: {str(e)}")
+        logger.error(traceback.format_exc())
+        return jsonify({"error": "Page temporarily unavailable"}), 500
+
+@app.route('/health')
+def health_check():
+    """Health check endpoint for monitoring"""
+    try:
+        return jsonify({
+            "status": "healthy",
+            "timestamp": datetime.utcnow().isoformat(),
+            "service": "good-parents-justice"
+        })
+    except Exception as e:
+        logger.error(f"Health check failed: {str(e)}")
+        return jsonify({"status": "unhealthy", "error": str(e)}), 500
+
+@app.route('/api/status')
+def api_status():
+    """API status endpoint"""
+    try:
+        return jsonify({
+            "api_status": "operational",
+            "timestamp": datetime.utcnow().isoformat(),
+            "service": "Good Parents Justice - Family Law Assistance Platform",
+            "version": "1.0.0",
+            "endpoints": ["/", "/health", "/api/status", "/features", "/about"]
+        })
+    except Exception as e:
+        logger.error(f"API status check failed: {str(e)}")
+        return jsonify({"error": "API unavailable"}), 500
+
+@app.route('/features')
+def features():
+    """Features page"""
+    try:
+        return render_template('features.html')
+    except Exception as e:
+        logger.error(f"Error in features route: {str(e)}")
+        return jsonify({"error": "Features page temporarily unavailable"}), 500
+
+@app.route('/about')
+def about():
+    """About page"""
+    try:
+        return render_template('about.html')
+    except Exception as e:
+        logger.error(f"Error in about route: {str(e)}")
+        return jsonify({"error": "About page temporarily unavailable"}), 500
+
+@app.route('/contact')
+def contact():
+    """Contact page"""
+    try:
+        return render_template('contact.html')
+    except Exception as e:
+        logger.error(f"Error in contact route: {str(e)}")
+        return jsonify({"error": "Contact page temporarily unavailable"}), 500
+
+@app.errorhandler(404)
+def not_found(error):
+    """Handle 404 errors"""
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    """Handle 500 errors"""
+    logger.error(f"Internal server error: {str(error)}")
+    return render_template('500.html'), 500
+
+@app.before_request
+def log_request_info():
+    """Log request information for debugging"""
+    logger.info(f"Request: {request.method} {request.url}")
+    if request.method == 'POST':
+        logger.info(f"Form data: {request.form}")
+
+if __name__ == '__main__':
+    # For local development
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=False)
+```
+
