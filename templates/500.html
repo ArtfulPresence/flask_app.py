@@ -1,0 +1,29 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}Server Error - Good Parents Justice{% endblock %}
+
+{% block content %}
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-8">
+            <h1 class="text-6xl font-bold text-gray-300 mb-4">500</h1>
+            <h2 class="text-3xl font-bold legal-blue mb-4">Server Error</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                We're experiencing technical difficulties. Our team has been notified and is working to resolve the issue.
+            </p>
+        </div>
+        
+        <div class="space-y-4">
+            <a href="/" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300 inline-block">
+                Return to Home
+            </a>
+            <div class="text-gray-500">
+                <p>If the problem persists, please contact us at:</p>
+                <p class="font-semibold text-blue-600 mt-2">support@goodparentsjustice.ca</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+```
