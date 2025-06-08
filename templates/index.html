@@ -1,0 +1,170 @@
+```html
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="gradient-bg hero-pattern text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Family Law Assistance for 
+                    <span class="text-yellow-300">Ontario Parents</span>
+                </h1>
+                <p class="text-xl mb-8 text-blue-100">
+                    Comprehensive legal guidance for parents going through separation who cannot afford or cannot find legal representation. Get the support you deserve with AI-powered assistance, complete court forms, and professional resources.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition duration-300">
+                        Get Started Free
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <img src="https://images.unsplash.com/photo-1506836467174-27f1042aa48c" 
+                     alt="Family holding hands - representing family unity and support" 
+                     class="rounded-lg shadow-2xl w-full h-96 object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem Statement -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold legal-blue mb-4">
+                You Don't Have to Navigate Family Law Alone
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Going through separation is challenging enough. Don't let the complexity of Ontario's family law system add to your stress when you can't afford legal representation.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Legal Fees Too High</h3>
+                <p class="text-gray-600">Average family lawyer costs $300-500/hour - out of reach for many parents.</p>
+            </div>
+            
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Critical Deadlines</h3>
+                <p class="text-gray-600">Missing court deadlines can cost you your case - appeals have only 30 days.</p>
+            </div>
+            
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Complex Forms</h3>
+                <p class="text-gray-600">Ontario family court forms are confusing and one mistake can delay your case.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold legal-blue mb-4">
+                Everything You Need in One Platform
+            </h2>
+            <p class="text-xl text-gray-600">
+                Comprehensive tools and resources designed specifically for Ontario family law
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Court Forms -->
+            <div class="feature-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">All Ontario Court Forms</h3>
+                <p class="text-gray-600 mb-4">Access to all official Ontario Family Court forms with step-by-step completion guidance.</p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Application forms</li>
+                    <li>• Financial statements</li>
+                    <li>• Motion forms</li>
+                    <li>• Consent orders</li>
+                </ul>
+            </div>
+
+            <!-- AI Assistant -->
+            <div class="feature-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">AI-Powered Assistance</h3>
+                <p class="text-gray-600 mb-4">24/7 context-aware legal guidance and form completion assistance powered by AI.</p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Smart form wizard</li>
+                    <li>• Legal question answering</li>
+                    <li>• Deadline reminders</li>
+                    <li>• Document review</li>
+                </ul>
+            </div>
+
+            <!-- Legal Resources -->
+            <div class="feature-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">14+ Legal Resources</h3>
+                <p class="text-gray-600 mb-4">Comprehensive library of case law, guides, and video tutorials specific to Ontario family law.</p>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Case law database</li>
+                    <li>• Step-by-step guides</li>
+                    <li>• Video tutorials</li>
+                    <li>• Professional directory</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16 gradient-bg text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Get the Legal Help You Deserve?
+        </h2>
+        <p class="text-xl mb-8 text-blue-100">
+            Join thousands of Ontario parents who have successfully navigated family law with our comprehensive platform. Start your journey to legal clarity today.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition duration-300">
+                Start Free Today
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition duration-300">
+                Schedule Demo
+            </button>
+        </div>
+        <p class="mt-6 text-sm text-blue-200">
+            No credit card required • Full access to basic features • Professional support available
+        </p>
+    </div>
+</section>
+{% endblock %}
