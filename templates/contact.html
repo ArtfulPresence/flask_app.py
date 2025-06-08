@@ -1,0 +1,208 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Good Parents Justice - Get Support{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="gradient-bg text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact & Support</h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+            Get the help you need navigating Ontario family law. We're here to support you every step of the way.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Options -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Platform Support -->
+            <div class="text-center p-6 bg-blue-50 rounded-lg">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Platform Support</h3>
+                <p class="text-gray-600 mb-4">Questions about using the platform, technical issues, or account help.</p>
+                <p class="font-semibold text-blue-600">support@goodparentsjustice.ca</p>
+                <p class="text-sm text-gray-500 mt-2">Response within 24 hours</p>
+            </div>
+
+            <!-- Legal Information -->
+            <div class="text-center p-6 bg-green-50 rounded-lg">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Legal Information</h3>
+                <p class="text-gray-600 mb-4">Questions about our legal resources, forms, or general family law information.</p>
+                <p class="font-semibold text-green-600">legal@goodparentsjustice.ca</p>
+                <p class="text-sm text-gray-500 mt-2">Response within 48 hours</p>
+            </div>
+
+            <!-- General Inquiries -->
+            <div class="text-center p-6 bg-purple-50 rounded-lg">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">General Inquiries</h3>
+                <p class="text-gray-600 mb-4">Partnership opportunities, media inquiries, or general questions about our mission.</p>
+                <p class="font-semibold text-purple-600">info@goodparentsjustice.ca</p>
+                <p class="text-sm text-gray-500 mt-2">Response within 72 hours</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h2 class="text-2xl font-bold legal-blue mb-6 text-center">Send Us a Message</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                            <input type="text" id="first-name" name="first-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <select id="subject" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Please select a subject</option>
+                            <option value="platform-support">Platform Support</option>
+                            <option value="legal-information">Legal Information Question</option>
+                            <option value="technical-issue">Technical Issue</option>
+                            <option value="feedback">Feedback or Suggestion</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Please describe your question or issue in detail..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Resources -->
+<section class="py-16 bg-red-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-red-700 mb-4">Emergency & Crisis Resources</h2>
+            <p class="text-lg text-red-600">If you or your children are in immediate danger, contact emergency services immediately.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-red-700 mb-3">Emergency Services</h3>
+                <p class="text-3xl font-bold text-red-600 mb-2">911</p>
+                <p class="text-gray-600">For immediate danger or life-threatening situations</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-red-700 mb-3">Assaulted Women's Helpline</h3>
+                <p class="text-xl font-bold text-red-600 mb-2">1-866-863-0511</p>
+                <p class="text-gray-600">24/7 crisis line for women experiencing abuse</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-red-700 mb-3">Kids Help Phone</h3>
+                <p class="text-xl font-bold text-red-600 mb-2">1-800-668-6868</p>
+                <p class="text-gray-600">24/7 support for children and youth</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-red-700 mb-3">Ontario Mental Health Helpline</h3>
+                <p class="text-xl font-bold text-red-600 mb-2">1-866-531-2600</p>
+                <p class="text-gray-600">Mental health support and crisis intervention</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-red-700 mb-3">Legal Aid Ontario</h3>
+                <p class="text-xl font-bold text-red-600 mb-2">1-800-668-8258</p>
+                <p class="text-gray-600">Free legal assistance for qualifying individuals</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-red-700 mb-3">Family Court Support Worker</h3>
+                <p class="text-xl font-bold text-red-600 mb-2">At Your Local Court</p>
+                <p class="text-gray-600">Free on-site support at family courthouses</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold legal-blue text-center mb-12">Frequently Asked Questions</h2>
+        
+        <div class="space-y-6">
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold legal-blue mb-3">How quickly can I expect a response to my inquiry?</h3>
+                <p class="text-gray-600">Response times depend on the type of inquiry. Platform support questions are typically answered within 24 hours, legal information questions within 48 hours, and general inquiries within 72 hours.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold legal-blue mb-3">Can you provide legal advice for my specific case?</h3>
+                <p class="text-gray-600">Good Parents Justice provides legal information and tools, but we cannot provide specific legal advice for individual cases. For personalized legal advice, please consult with a qualified family law attorney.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold legal-blue mb-3">Do you offer phone support?</h3>
+                <p class="text-gray-600">Currently, we provide support primarily through email to ensure accurate and documented responses. For urgent technical issues, please email support@goodparentsjustice.ca and mark your message as "urgent."</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold legal-blue mb-3">Is my personal information kept confidential?</h3>
+                <p class="text-gray-600">Absolutely. We maintain strict confidentiality and privacy standards. Your personal information is never shared with third parties and is protected with industry-standard security measures.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold legal-blue mb-3">What if I need help outside of business hours?</h3>
+                <p class="text-gray-600">Our AI assistant is available 24/7 through the platform for basic questions and guidance. For crisis situations, please contact the emergency resources listed above.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-16 gradient-bg text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Get Started?
+        </h2>
+        <p class="text-xl mb-8 text-blue-100">
+            Don't wait - get the legal assistance you need today. Our comprehensive platform is ready to help you navigate Ontario family law.
+        </p>
+        <button class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition duration-300">
+            Access Platform Now
+        </button>
+    </div>
+</section>
+{% endblock %}
+```
